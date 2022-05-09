@@ -24,6 +24,7 @@ const SignUp = () => {
     if (user) {
         return <p className='text-3xl text-center'>Registered User</p>
     }
+    console.log(user);
     const registerUser = (event) => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
@@ -41,7 +42,7 @@ const SignUp = () => {
 
         event.preventDefault();
     }
-    console.log(user);
+
     return (
         <div>
             <div className='border-2 rounded border-black w-1/2 mx-80 mt-10 '>
