@@ -23,6 +23,7 @@ const CustomerForm = () => {
     return (
 
         <div className='border-2 rounded border-black w-1/2 mx-80 mt-10 '>
+            <h1 className='text-center text-4xl '>Customer Information Form</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input required placeholder='name' className='border rounded w-1/2 m-4 p-2' {...register("name")} /> <br />
                 <input required placeholder='address' className='border rounded w-1/2 m-4 p-2' {...register("address")} /> <br />
