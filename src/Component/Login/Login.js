@@ -15,7 +15,7 @@ const Login = () => {
     const formSubmit = (event) => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        if (user) {
+        if (!user) {
             window.alert('your email or password is incorrect')
         } else {
             signInWithEmailAndPassword(email, password);

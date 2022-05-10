@@ -1,5 +1,6 @@
+import { getAuth } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
+// import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Cart from '../Cart/Cart';
 
@@ -16,7 +17,7 @@ const CustomerInfo = () => {
 
     return (
         <div>
-            <h1 className='text-center text-4xl'>Our Customer Information</h1>
+            <h1 className='text-center text-4xl mb-10'>Our Customer Information</h1>
             <div className='grid grid-cols-3  gep-2  '>
                 {
                     customers.map(data => <Cart
