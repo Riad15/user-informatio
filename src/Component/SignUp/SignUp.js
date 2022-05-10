@@ -2,10 +2,8 @@ import auth from '../../firebase.init'
 import React, { useRef } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import Loading from '../Loading/Loading';
-import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
-    const navigate = useNavigate();
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const ConfirmRef = useRef('');
@@ -21,10 +19,11 @@ const SignUp = () => {
     if (loading) {
         return <Loading></Loading>
     }
+    console.log(user);
     if (user) {
         return <p className='text-3xl text-center'>Registered User</p>
     }
-    console.log(user);
+
     const registerUser = (event) => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
